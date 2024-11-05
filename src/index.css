@@ -1,0 +1,27 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+:root{
+  /*Colors*/
+  --nav-color: rgba(255,255,255,0.1);
+  --primary-color: #fff;
+  --style-color: #000255;
+  --background-color: #000;
+  --liner-color: #0f0f0f;
+  /*Fonts*/
+  --font-family: 'Poppins', sans-serif;
+  --font-size: 16px;
+  --line-height: 1.6;
+  
+  }
+
+body{
+  color: var(--primary-color);
+  background-color: #000;
+}

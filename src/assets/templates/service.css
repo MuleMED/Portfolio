@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+ 
+  .service_section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .service_section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #00bfff;
+  }
+  
+
+  .service_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .service_item {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service_item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+  
+  .service_item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #00bfff;
+  }
+  
+  .service_item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  .FAQ {
+    text-align: start;
+  }
+  
+  .FAQ {
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  .FAQ h3 {
+    cursor: pointer;
+    color: #00bfff;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+  }
+  
+  .FAQ h3:hover {
+    color: #009acb;
+  }
+  
+  .faq_item p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .faq_item p {
+    max-height: 200px; /* Adjust based on content length */
+    opacity: 1;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .FAQ h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #00bfff;
+  }
+  
+  .faq_item {
+    margin-bottom: 25px;
+  }
+  
+  .faq_item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00bfff;
+  }
+  
+  .faq_item p {
+    font-size: 1em;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+
+  @media (max-width: 768px) {
+    .service_section h2,
+    .FAQ h2 {
+      font-size: 2em;
+    }
+  
+    .service_item h3,
+    .faq_item h3 {
+      font-size: 1.4em;
+    }
+  }

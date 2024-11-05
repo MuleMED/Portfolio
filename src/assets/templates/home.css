@@ -1,0 +1,250 @@
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --accent-color: #6273bb;
+    --btn-color: #2f9d3e;
+    --btn-hover-color: #0056b3;
+    --glow-start: rgba(64, 46, 227, 0.5);
+    --glow-end: rgb(23, 43, 170);
+    --subtext-color: #ffffffbe;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.hov div  {
+    display: block;
+    text-align: center;
+
+}
+
+
+.heada{
+    background-color: #7591eb;
+    padding: 10px;
+    align-items: center;
+    border-radius: 30px;
+
+}
+.heada ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #f2e5e5;
+    flex-wrap: nowrap;
+}
+
+.wrapper{
+    min-height: 100vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:15px;
+    font-size: 20px;
+
+}
+
+.heada, .last, .content1, .content2>div>div{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    
+
+}
+.subcontent2>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    background-color: #212121;
+    padding: 10px;
+    align-items: center;
+    border-radius: 30px;
+
+}
+.subcontent1, p{
+    background-color: #212121;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    gap: 15px;
+   
+}
+
+.subcontent2 div div{
+    margin: 5px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+   
+}
+.hov:hover{
+    
+        background-color:var(--btn-hover-bg-color) ;
+        border: 2px solid #fff;
+        border-color: var(--btn-bg-color);
+        color: var(--primary-color); 
+        cursor: pointer;
+    }
+
+
+.content1 img{
+    width: 90%;
+    border-radius: 10%;
+    object-fit: cover;
+    background: var(--accent-color);
+   
+
+}
+
+
+
+.main-section{
+    flex:6;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content2{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.content2>div{
+    flex:1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+  
+  .item {
+    width: 200px;
+    height: 100px;
+    background-color: transparent; /* Remove red background */
+    position: absolute;
+    left: max(calc(150px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Text and glow effect for h4 */
+  .item h4 {
+    font-size: 1.2rem;
+    color: #1d0404; /* Blue color */
+    text-shadow: 0 0 8px #00f, 0 0 16px #00f, 0 0 24px #00f;
+    animation: glowing 1.5s infinite alternate;
+  }
+  
+ 
+  
+  /* Animation for scrolling effect */
+  @keyframes scrollLeft {
+    to {
+      left: -200px;
+    }
+  }
+  
+  /* Animation delay for each item */
+  .item1 { animation-delay: calc(30s / 8 * (8 - 1) * -1); }
+  .item2 { animation-delay: calc(30s / 8 * (8 - 2) * -1); }
+  .item3 { animation-delay: calc(30s / 8 * (8 - 3) * -1); }
+  .item4 { animation-delay: calc(30s / 8 * (8 - 4) * -1); }
+  .item5 { animation-delay: calc(30s / 8 * (8 - 5) * -1); }
+  .item6 { animation-delay: calc(30s / 8 * (8 - 6) * -1); }
+  .item7 { animation-delay: calc(30s / 8 * (8 - 7) * -1); }
+  .item8 { animation-delay: calc(30s / 8 * (8 - 8) * -1); }
+  
+
+
+@media screen and (max-width: 768px){
+    .main-section>div{
+        min-height: 400px;
+    }
+    .content1{
+        flex:100%;
+    }
+    .heada{
+        min-height: 90px;
+    }
+    .last{
+        min-height: 110px;
+    }    
+}
+
+@media screen and (max-width: 520px){
+    .content2{
+        flex-direction: column;
+    }
+}
+
+
+.just-mid {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    min-height: 30px; /* Full height of the viewport */
+    text-align: center; /* Center text within items */
+    position: relative; /* Position relative for pseudo-elements */
+    overflow: hidden; /* Hide overflow for the fade effect */
+  }
+  
+  .just-mid::before,
+  .just-mid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with pseudo-elements */
+  }
+  
+  .just-mid::before {
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 10%); /* Fade from solid to transparent */
+    left: 0;
+  }
+  
+  .just-mid::after {
+    background: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 10%); /* Fade from solid to transparent */
+    right: 0;
+  }
+  
+  .item {
+    width: 200px; /* Fixed width for each item */
+    height: 100px; /* Fixed height for each item */
+    background-color: transparent; /* Background can be adjusted */
+    margin: 5px 0; /* Space between items */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text within the item */
+  }
+  
+  .item h4 {
+    font-size: 1.2rem;
+    color: #ecfac9; /* Text color */
+    text-shadow: 0 0 8px #00f, 0 0 16px #00f, 0 0 24px #00f; /* Glowing text effect */
+    animation: glowing 1.5s infinite alternate; /* Animation for glowing effect */
+  }
+
+ 
+  
+
+  
